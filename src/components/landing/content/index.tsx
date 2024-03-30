@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./content.module.css";
+import Image from "next/image";
 
 const Content: React.FC = () => {
   return (
@@ -11,8 +12,9 @@ const Content: React.FC = () => {
         <p>Come showcase your Build!</p>
       </div>
       <div className={styles.section_logo}>
-        <img
-          src="/images/landing/logo.svg"
+        <Image
+          alt="this is landing logo."
+          src={"/images/landing/logo.svg"}
           className={styles.section_logoimg}
         />
       </div>

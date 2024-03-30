@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import styles from "./footer.module.css";
-import { Img } from "react-image";
+import Image from "next/image";
 
 const Footer: React.FC = () => {
   return (
@@ -12,19 +12,19 @@ const Footer: React.FC = () => {
         </div>
         <div className={styles.section_social_btn}>
           <a href="tel:1234567890">
-            <Img alt="Phone Icon Footer" src={`/images/landing/Phone.svg`} />
+            <Image alt="Phone Icon Footer" src={`/images/landing/Phone.svg`} />
           </a>
           <a href="example@example.com">
-            <Img alt="Email Icon Footer" src={"/images/landing/Email.svg"} />
+            <Image alt="Email Icon Footer" src={"/images/landing/Email.svg"} />
           </a>
           <a href="https://linkedin.com">
-            <Img
+            <Image
               alt="LinkedIn Icon Footer"
               src={`/images/landing/LinkedIn.svg`}
             />
           </a>
           <a href="https://instagram.com">
-            <Img
+            <Image
               alt="Instagram Icon Footer"
               src={`/images/landing/Insta.svg`}
             />

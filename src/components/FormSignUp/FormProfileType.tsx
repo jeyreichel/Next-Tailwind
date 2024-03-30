@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
 import { BsCheck, BsChevronRight } from "react-icons/bs";
 import { SignUp } from "@/types/signup";
+import Image from "next/image";
 
 const ProfileTypePage = (props: SignUp) => {
   const [profileBadge1, setProfileBadge1] = useState<boolean>(false);
@@ -27,7 +27,7 @@ const ProfileTypePage = (props: SignUp) => {
         <div className="space-y-4">
           <div
             className={`relative cursor-pointer rounded-full bg-white p-2 ${
-              profileBadge1 === false ? "" : "border-blue-3 border border-4"
+              profileBadge1 === false ? "" : "border border-4 border-blue-3"
             }`}
             onClick={() => setProfileBadge1(!profileBadge1)}
           >
@@ -38,7 +38,7 @@ const ProfileTypePage = (props: SignUp) => {
               alt="This is profile icon."
             />
             <span
-              className={`bg-blue-3 absolute right-4 top-4 rounded-full p-1 text-white ${
+              className={`absolute right-4 top-4 rounded-full bg-blue-3 p-1 text-white ${
                 profileBadge1 === false ? "hidden" : "inline"
               }`}
             >
@@ -52,7 +52,7 @@ const ProfileTypePage = (props: SignUp) => {
         <div className="space-y-4">
           <div
             className={`relative cursor-pointer rounded-full bg-white px-2 py-10 ${
-              profileBadge2 === false ? "" : "border-blue-3 border border-4"
+              profileBadge2 === false ? "" : "border border-4 border-blue-3"
             }`}
             onClick={() => setProfileBadge2(!profileBadge2)}
           >
@@ -63,7 +63,7 @@ const ProfileTypePage = (props: SignUp) => {
               alt="This is profile icon."
             />
             <span
-              className={`bg-blue-3 absolute right-4 top-4 rounded-full p-1 text-white ${
+              className={`absolute right-4 top-4 rounded-full bg-blue-3 p-1 text-white ${
                 profileBadge2 === false ? "hidden" : "inline"
               }`}
             >
@@ -77,7 +77,7 @@ const ProfileTypePage = (props: SignUp) => {
         <div className="space-y-4">
           <div
             className={`relative cursor-pointer rounded-full bg-white px-2 py-4 ${
-              profileBadge3 === false ? "" : "border-blue-3 border border-4"
+              profileBadge3 === false ? "" : "border border-4 border-blue-3"
             }`}
             onClick={() => setProfileBadge3(!profileBadge3)}
           >
@@ -88,7 +88,7 @@ const ProfileTypePage = (props: SignUp) => {
               alt="This is profile icon."
             />
             <span
-              className={`bg-blue-3 absolute right-4 top-4 rounded-full p-1 text-white ${
+              className={`absolute right-4 top-4 rounded-full bg-blue-3 p-1 text-white ${
                 profileBadge3 === false ? "hidden" : "inline"
               }`}
             >
@@ -102,7 +102,7 @@ const ProfileTypePage = (props: SignUp) => {
       </div>
       <div className="flex justify-center pb-24 pt-8">
         <button
-          className={`flex items-center font-semi-bold rounded-md bg-gray-5 px-18 py-2 text-title-lg text-white ${
+          className={`font-semi-bold flex items-center rounded-md bg-gray-5 px-18 py-2 text-title-lg text-white ${
             profileBadge1 === true ||
             profileBadge2 === true ||
             profileBadge3 === true

@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import { BsSearch } from "react-icons/bs";
+import Image from "next/image";
 
 const Header = (props: {
   sidebarOpen: string | boolean | undefined;
@@ -69,9 +69,9 @@ const Header = (props: {
               <input
                 type="text"
                 placeholder="Search"
-                className="w-full bg-transparent p-1 font-medium focus:outline-none xl:w-180 lg:w-150 md:w-100 sm:w-75 border rounded"
+                className="w-full rounded border bg-transparent p-1 font-medium focus:outline-none sm:w-75 md:w-100 lg:w-150 xl:w-180"
               />
-              <button className="absolute right-0 top-1/2 -translate-y-1/2 bg-green-1 text-white h-full rounded-r p-2">
+              <button className="absolute right-0 top-1/2 h-full -translate-y-1/2 rounded-r bg-green-1 p-2 text-white">
                 <BsSearch />
               </button>
             </div>
@@ -83,7 +83,6 @@ const Header = (props: {
             height={70}
             src={"/images/image31.png"}
             alt="Logo"
-            priority
           />
         </div>
       </div>

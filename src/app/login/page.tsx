@@ -14,6 +14,7 @@ import { debounce } from "lodash";
 import "@/css/login.css";
 import Footer from "@/components/landing/footer";
 import toast, { Toaster } from "react-hot-toast";
+import Image from "next/image";
 
 const notify = () =>
   toast.error("User not found, Please register now!", {
@@ -96,9 +97,9 @@ const Login: React.FC = () => {
     }
   };
   return (
-    <div className="bg-login h-dvh bg-cover bg-fixed bg-bottom bg-no-repeat">
+    <div className="h-dvh bg-login bg-cover bg-fixed bg-bottom bg-no-repeat">
       <div className="section_logo pt-12">
-        <img
+        <Image
           src="/images/landing/logo.svg"
           className="section_logoimg"
           alt="Logo"
@@ -177,7 +178,7 @@ const Login: React.FC = () => {
             <div className="email_password">
               <div className="email">
                 <div className="logo">
-                  <img
+                  <Image
                     src="/images/icon/icon-hand.png"
                     className="p-1"
                     alt="Logo"
@@ -198,7 +199,7 @@ const Login: React.FC = () => {
               {emailValid && (
                 <div className="pass">
                   <div className="logo">
-                    <img
+                    <Image
                       src="/images/icon/icon-hand.png"
                       className="p-1"
                       alt="Logo"

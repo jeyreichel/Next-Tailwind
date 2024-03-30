@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { jsonData } from "@/items.json";
+import jsonData from "@/items.json";
 import {
   BsChevronRight,
   BsChevronLeft,
@@ -10,11 +10,11 @@ import {
   BsChatLeft,
   BsForward,
 } from "react-icons/bs";
-import Image from "next/image";
 import Glide from "@glidejs/glide";
+import Image from "next/image";
 
 const Dashboard: React.FC = () => {
-  const { images, cards, club1, club2 } = jsonData;
+  const { images, cards, club1, club2 } = jsonData.jsonData;
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const handleNextSlide = () => {
@@ -133,7 +133,6 @@ const Dashboard: React.FC = () => {
                 <div className="flex justify-between px-4 py-2">
                   <div className="flex items-center space-x-2">
                     <Image
-                      key={item.id}
                       width={30}
                       height={30}
                       src={item.avatarUrl}
@@ -152,7 +151,6 @@ const Dashboard: React.FC = () => {
                 </div>
                 <Link href={`/postDetail/${item.id}`}>
                   <Image
-                    key={item.id}
                     src={item.imgUrl}
                     width={700}
                     height={500}
@@ -181,7 +179,6 @@ const Dashboard: React.FC = () => {
                       {item.num3}
                     </p>
                     <Image
-                      key={item.id}
                       src={item.dapBlack}
                       width={31}
                       height={25}

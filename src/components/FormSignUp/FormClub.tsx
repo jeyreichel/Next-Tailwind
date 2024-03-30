@@ -1,10 +1,10 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import Link from "next/link";
 import { SignUp } from "@/types/signup";
 import { jsonData } from "@/items.json";
+import Image from "next/image";
 
 const ClubPage = (props: SignUp) => {
   const { recommendation1, recommendation2, club1, club2 } = jsonData;

@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
 import { SignUp } from "@/types/signup";
 import {
   BsChevronRight,
@@ -9,6 +8,7 @@ import {
   BsTwitterX,
   BsInstagram,
 } from "react-icons/bs";
+import Image from "next/image";
 
 const SocialLinkPage = (props: SignUp) => {
   const [facebook, setFacebook] = useState<boolean>(false);
@@ -28,7 +28,7 @@ const SocialLinkPage = (props: SignUp) => {
         <div className="flex justify-between space-x-2">
           <BsFacebook
             className={`cursor-pointer rounded bg-white p-2 text-8xl text-black ${
-              facebook === false ? "" : "border-blue-3 border border-4"
+              facebook === false ? "" : "border border-4 border-blue-3"
             }`}
             onClick={() => {
               setFacebook(!facebook);
@@ -36,7 +36,7 @@ const SocialLinkPage = (props: SignUp) => {
           />
           <BsInstagram
             className={`cursor-pointer rounded bg-white p-2 text-8xl text-black ${
-              instagram === false ? "" : "border-blue-3 border border-4"
+              instagram === false ? "" : "border border-4 border-blue-3"
             }`}
             onClick={() => {
               setInstagram(!instagram);
@@ -44,7 +44,7 @@ const SocialLinkPage = (props: SignUp) => {
           />
           <BsTwitterX
             className={`cursor-pointer rounded bg-white p-2 text-8xl text-black ${
-              twitter === false ? "" : "border-blue-3 border border-4"
+              twitter === false ? "" : "border border-4 border-blue-3"
             }`}
             onClick={() => {
               setTwitter(!twitter);
@@ -65,7 +65,7 @@ const SocialLinkPage = (props: SignUp) => {
             className={`font-semi-bold flex items-center rounded-md bg-gray-5 px-8 py-2 text-title-lg text-white ${
               facebook === true || instagram === true || twitter === true
                 ? "bg-gradient-to-b from-blue-1 to-green-2"
-                : 'disable'
+                : "disable"
             }`}
             onClick={() => {
               props.setActiveStep(6);

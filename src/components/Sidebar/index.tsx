@@ -1,12 +1,10 @@
 "use client";
-
 import React, { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import SidebarLinkGroup from "./SidebarLinkGroup";
 import { BsHeart, BsChevronRight, BsRecord } from "react-icons/bs";
-
+import Image from "next/image";
 interface SidebarProps {
   sidebarOpen: boolean;
   setSidebarOpen: (arg: boolean) => void;
@@ -70,7 +68,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
       <div className="flex flex-col items-center justify-between gap-2">
         <Link href="/">
           <div className="flex items-center justify-center gap-4 py-4">
-            <span className="rounded-full border border-white border-4">
+            <span className="rounded-full border border-4 border-white">
               <Image
                 width={112}
                 height={112}
@@ -80,8 +78,10 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
             </span>
           </div>
         </Link>
-        <h1 className="text-center font-sans text-title-sm2 text-white pb-6">Johan Smith</h1>
-        <div className="border-t py-4 px-26 border-white"></div>
+        <h1 className="font-sans pb-6 text-center text-title-sm2 text-white">
+          Johan Smith
+        </h1>
+        <div className="border-t border-white px-26 py-4"></div>
 
         <button
           ref={trigger}
@@ -124,9 +124,9 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                     <React.Fragment>
                       <Link
                         href="#"
-                        className={`group relative flex items-center gap-2.5 rounded px-4 py-2 font-medium font-sans text-lg text-white focus:bg-green-3 duration-300 ease-in-out dark:hover:bg-meta-4 ${
-                          (pathname === "/favorite" ||
-                            pathname.includes("favorite"))                          
+                        className={`font-sans group relative flex items-center gap-2.5 rounded px-4 py-2 text-lg font-medium text-white duration-300 ease-in-out focus:bg-green-3 dark:hover:bg-meta-4 ${
+                          pathname === "/favorite" ||
+                          pathname.includes("favorite")
                         }`}
                         onClick={(e) => {
                           e.preventDefault();
@@ -137,7 +137,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                       >
                         <BsHeart />
                         My favorite
-                        <BsChevronRight 
+                        <BsChevronRight
                           className={`absolute right-4 top-1/2 -translate-y-1/2 fill-current ${
                             open && "rotate-90"
                           }`}
@@ -153,7 +153,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                           <li>
                             <Link
                               href="/builds"
-                              className={`group relative flex items-center gap-2.5 rounded-md px-4 font-sans text-lg text-white duration-300 ease-in-out ${
+                              className={`font-sans group relative flex items-center gap-2.5 rounded-md px-4 text-lg text-white duration-300 ease-in-out ${
                                 pathname === "/builds"
                               }`}
                             >
@@ -164,7 +164,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                           <li>
                             <Link
                               href="/routes"
-                              className={`group relative flex items-center gap-2.5 rounded-md px-4 font-sans text-lg text-white duration-300 ease-in-out ${
+                              className={`font-sans group relative flex items-center gap-2.5 rounded-md px-4 text-lg text-white duration-300 ease-in-out ${
                                 pathname === "/routes"
                               }`}
                             >
@@ -191,9 +191,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                     <React.Fragment>
                       <Link
                         href="#"
-                        className={`group relative flex items-center gap-2.5 rounded px-4 py-2 font-medium font-sans text-lg text-white focus:bg-green-3 duration-300 ease-in-out dark:hover:bg-meta-4 ${
-                          (pathname === "/clubs" ||
-                            pathname.includes("clubs"))                          
+                        className={`font-sans group relative flex items-center gap-2.5 rounded px-4 py-2 text-lg font-medium text-white duration-300 ease-in-out focus:bg-green-3 dark:hover:bg-meta-4 ${
+                          pathname === "/clubs" || pathname.includes("clubs")
                         }`}
                         onClick={(e) => {
                           e.preventDefault();
@@ -204,7 +203,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                       >
                         <BsHeart />
                         My Clubs
-                        <BsChevronRight 
+                        <BsChevronRight
                           className={`absolute right-4 top-1/2 -translate-y-1/2 fill-current ${
                             open && "rotate-90"
                           }`}
@@ -220,7 +219,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                           <li>
                             <Link
                               href="/youth"
-                              className={`group relative flex items-center gap-2.5 rounded-md px-4 font-sans text-lg text-white duration-300 ease-in-out ${
+                              className={`font-sans group relative flex items-center gap-2.5 rounded-md px-4 text-lg text-white duration-300 ease-in-out ${
                                 pathname === "/youth"
                               }`}
                             >
@@ -231,7 +230,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                           <li>
                             <Link
                               href="/overlanding"
-                              className={`group relative flex items-center gap-2.5 rounded-md px-4 font-sans text-lg text-white duration-300 ease-in-out ${
+                              className={`font-sans group relative flex items-center gap-2.5 rounded-md px-4 text-lg text-white duration-300 ease-in-out ${
                                 pathname === "/overlanding"
                               }`}
                             >
@@ -242,7 +241,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                           <li>
                             <Link
                               href="/bronco"
-                              className={`group relative flex items-center gap-2.5 rounded-md px-4 font-sans text-lg text-white duration-300 ease-in-out ${
+                              className={`font-sans group relative flex items-center gap-2.5 rounded-md px-4 text-lg text-white duration-300 ease-in-out ${
                                 pathname === "/bronco"
                               }`}
                             >
@@ -253,7 +252,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                           <li>
                             <Link
                               href="/f100"
-                              className={`group relative flex items-center gap-2.5 rounded-md px-4 font-sans text-lg text-white duration-300 ease-in-out ${
+                              className={`font-sans group relative flex items-center gap-2.5 rounded-md px-4 text-lg text-white duration-300 ease-in-out ${
                                 pathname === "/f100"
                               }`}
                             >
@@ -264,7 +263,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                           <li>
                             <Link
                               href="/ranger"
-                              className={`group relative flex items-center gap-2.5 rounded-md px-4 font-sans text-lg text-white duration-300 ease-in-out ${
+                              className={`font-sans group relative flex items-center gap-2.5 rounded-md px-4 text-lg text-white duration-300 ease-in-out ${
                                 pathname === "/ranger"
                               }`}
                             >
@@ -289,7 +288,6 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
           height={187}
           src={"/images/logo/logo.png"}
           alt="Logo"
-          priority
         />
       </div>
     </aside>

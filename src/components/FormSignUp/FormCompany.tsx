@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
 import { SignUp } from "@/types/signup";
 import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
+import Image from "next/image";
 
 const CompanyPage = (props: SignUp) => {
   const [company, setCompany] = useState<String>("");
@@ -16,7 +16,7 @@ const CompanyPage = (props: SignUp) => {
         alt="This is logo."
         className="min-[500px]:w-[100px] sm:h-[80px] sm:w-[120px] md:h-[90px] md:w-[150px]"
       />
-      <div className="space-y-8 w-[50vh]">
+      <div className="w-[50vh] space-y-8">
         <div className="flex space-x-2">
           <div className="rounded-md bg-white p-4">
             <Image
@@ -29,7 +29,7 @@ const CompanyPage = (props: SignUp) => {
           <input
             type="text"
             placeholder="Enter name enthusiast or company"
-            className="rounded-md px-4 py-2 focus:border-white w-full"
+            className="w-full rounded-md px-4 py-2 focus:border-white"
             onChange={(event) => {
               setCompany(event.target.value);
             }}
